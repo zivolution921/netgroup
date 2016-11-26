@@ -4,7 +4,5 @@
 4. 
 5. Associate Users to event.
 6. Join/Register to event using Join table. User has options to join to any event. 
- 
+
 7. Figure Twilio API for rails.
-
-
