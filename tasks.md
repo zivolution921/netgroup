@@ -1,5 +1,5 @@
 1. Create Events CRUD.
-2. Devise
+2. Devise - Completed. Working properly. 
 3. omniauth  app for fb and google.
 <<<<<<< HEAD
 4. Associate Users to event.
