@@ -30,7 +30,6 @@ class EventsController < ApplicationController
     @event = Event.find(params[:id])  
     @event.destroy  
     redirect_to root_path
-    
     #render json: @event
   end  
 
