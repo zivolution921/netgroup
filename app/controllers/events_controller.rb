@@ -1,18 +1,19 @@
 class EventsController < ApplicationController
   def index  
     @events = Event.all  
-    render json: @events 
+    #render json: @events 
   end
 
   def show
     @event = Event.find(params[:id])
-    render json: @event
+    #render json: @event
   end
 
   def create  
     @event = Event.new(event_params)  
-    if @event.save  
-      render json: @event
+    if @event.save 
+      redirect_to @event 
+      #render json: @event
     end  
   end  
 
@@ -20,14 +21,17 @@ class EventsController < ApplicationController
     @event = Event.find(params[:id])  
 
     if @event.update(event_params)  
-      render json: @event
+      redirect_to @event 
+      #render json: @event
     end  
   end  
 
   def destroy  
     @event = Event.find(params[:id])  
     @event.destroy  
-    render json: @event
+    redirect_to root_path
+    
+    #render json: @event
   end  
 
   private  
