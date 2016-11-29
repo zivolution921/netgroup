@@ -1,3 +1,13 @@
-<h1>Events</h1>
+<h1><%= @events.size %> Events</h1>
 <%=link_to current_user.email, edit_user_registration_path%>
 <%=link_to "Logout", destroy_user_session_path, method: :delete%>
+
+<ul>
+  <% @events.each do |event| %>
+    <li>
+      <strong><%= event.name %></strong>
+      <p><%= event.description %></p>
+    </li>
+  <% end %>
+</ul>
+
